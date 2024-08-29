@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="textbox">
+    <button id="tryit" onclick="handletry()">Try It </button>
+    <p id="demo"></p>
+    <script>
+         function handletry (){
+            var num =parseInt(document.getElementById("textbox").value)
+            
+            if(num >1){
+                document.getElementById("demo").innerHTML="Positive integer"
+            }
+            else if(num <1){
+                document.getElementById("demo").innerHTML="Negative number"
+
+            }
+            else if(num ===0){
+                document.getElementById("demo").innerHTML="Zero number"
+            }
+
+        }
+        
+      var temperature = parseFloat(100);
+if (temperature >= 98.0 && temperature <= 98.9) {
+    console.log("You have a little temperature.");
+    document.write("You have a little temperature.");
+}
+else if (temperature >= 99.0 && temperature <= 99.9) {
+    console.log("You have mild temperature.");
+    document.write("You have mild fever.");
+}
+else if (temperature >= 100.0 && temperature <= 100.9) {
+    console.log("You have fever.");
+    document.write("You have fever.");
+}
+else {
+    console.log("You don't have fever.");
+    document.write("You don't have fever.");
+}
+var gradepoints= 10
+if(gradepoints >=6 && gradepoints <=7 ){
+    document.write("Average grade.")
+}
+if(gradepoints >=7 && gradepoints <=8){
+    document.write("Good grade.")
+}
+if(gradepoints >=9 && gradepoints <=10 ){
+    document.write("Excellent grade.")
+}
+var dollynum = 3965452155
+if(dollynum %2 ===0){
+    document.write("Given number is even.")
+}
+else{
+    document.write("Given number is even.")  
+}
+var divi = 569
+if(divi / 4 ===0 ){
+    document.write("multiples of 4.")
+}
+else{
+    document.write("Given number is not multiples of 4.")
+}
+var cat =-89
+if((cat >1)&& (cat <= 0) && (cat== 0)){
+    document.write("Printing the number")
+}
+else if(cat <= 0){
+
+}
+else if(cat== 0){
+    
+}
+
+var chromeinte= 300
+ if( chromeinte % 3===0 && chromeinte %5 ===0){
+    document.write(" print FIZZ and BUZZ")
+}
+ else if(chromeinte % 3 === 0){
+    document.write("print FIZZ")
+}
+else if( chromeinte %  5 ===0){
+    document.write("Print BUZZ")
+}
+
+else{
+    OOPs
+}
+    </script>
+</body>
+</html>

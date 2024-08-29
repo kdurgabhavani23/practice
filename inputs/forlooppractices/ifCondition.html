@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If condition</title>
+</head>
+<body>
+    <script>
+        const names = [
+            {
+                id: 1,
+                name: 'Durga'
+            },
+            {
+                id: 2,
+                name: 'Bhavani'
+            },
+            {
+                id: 3,
+                name: 'Yavnika'
+            },
+            {
+                id: 4,
+                name: 'Nishika'
+            },
+            {
+                id: 5,
+                name: 'Malika'
+            }
+        ];
+
+       function createTable(data){
+        var table = document.createElement('table')
+
+        // header row
+        var headerrow = table.insertRow()
+        for (var key in data [0]){
+            var th = document.createElement('th');
+            th.textContent = key
+            headerrow.appendChild(th)
+        }
+            for (var i=0; i<data.length; i++){
+                var row = table.insertRow();
+                for (var key in data [i]){
+                    var cell = row.insertCell();
+                    cell.textContent = data[i][key]
+                }
+            }
+            document.body.appendChild(table)
+            
+        
+       }
+       createTable(names)
+    </script>
+</body>
+</html>

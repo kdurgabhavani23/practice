@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .hidden{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="search" id="searchhandle" onkeyup="handleSearch()">
+    
+    <table id="tableData">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Doe</td>
+                <td>30</td>
+                <td>john@example.com</td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>25</td>
+                <td>jane@example.com</td>
+            </tr>
+            <tr>
+                <td>Bob Johnson</td>
+                <td>35</td>
+                <td>bob@example.com</td>
+            </tr>
+        </tbody>
+    </table>
+    <input type="text" id="condition" class="hidden">
+    <button id="btnclick" class="hidden"> click me</button>
+    <p id="textinput"></p>
+
+    <button type="submit">submit</button>
+    <button id="btnclicking" onclick="clickingbtn()">Click me</button>
+    <script>
+        function clickingbtn(){
+        function handleSearch(){
+            let handler = document.getElementById("searchhandle").value.toUpperCase()
+        console.log(handler,"show input");
+        let tablenames= document.getElementById("tableData")
+        let tablerow = document.getElementsByTagName('tr')
+        for ( var i=0; i<tablerow.length;i++){
+            let td = tablerow[i].getElementsByTagName('td')[1]
+            if(td){
+                let textname = td.textContent || td.innerHTML
+                if(textname.toUpperCase().indexOf(handler) > -1){
+                    tablerow[1] .style.display =""
+                }
+                else{
+                    tablerow[1].style.display="none"
+                }
+            }
+        }
+
+        } 
+    }
+
+        const checking = true
+
+        var check = document.getElementById('condition')
+        document.getElementById('textinput').innerHTML=check.value
+        let btn = document.getElementById('btnclick')
+         if(checking){
+            check.classList.remove('hidden')
+          
+
+         }
+         else{
+            btn.classList.remove('hidden')
+
+
+         }
+
+
+       
+    </script>
+</body>
+</html>

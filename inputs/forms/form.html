@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<style>
+    body{
+        text-align: center;
+    }
+</style>
+<body>
+    <h2>HTML Forms</h2>
+
+
+  <label for="fname">First name:</label><br>
+  <input type="text" id="myText" value=""><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value=""><br><br>
+  <label for="myCheck">Checkbox:</label> 
+  <input type="checkbox" id="myCheck" onclick="myFunction()">
+  
+  <p id="text" style="display:none">Checkbox is CHECKED!</p>
+  <button onclick="handleSubmit()">Submit</button>
+  <label for="">Radio</label>
+  <input type="radio" name="" id="radio" onclick="handleRadio()">
+  <p id="hello" style=" display: none;">hello iam radio button</p>
+  <!-- <input type="submit" value="Submit" onclick="handleSubmit()"> -->
+
+<p id="Firstname"></p>
+<p id="Lastname"></p>
+
+
+<script>
+      
+      function myFunction() {
+  var checkBox = document.getElementById("myCheck");
+  var text = document.getElementById("text");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else if(checkBox.unchecked == false) {
+     text.style.display = "none";
+  }
+  else{
+    text.style.display = "none";
+  }
+}
+ function handleRadio(){
+ var checking =document.getElementById('radio')
+ var data = document.getElementById('hello')
+ if(checking.checked == true){
+    data.style.display ="block";
+ }
+ else if( checking.checked == false){
+    data.style.display ="none";
+ }
+ else{
+    data.style.display ="none";
+ }
+}
+    function handleSubmit(){
+        var x= document.getElementById('myText').value
+      document.getElementById('Firstname').innerHTML=x
+      console.log(x);
+      var y= document.getElementById('lname').value
+      document.getElementById('Lastname').innerHTML= y
+      console.log(y);
+    }   
+    </script>
+</body>
+</html>

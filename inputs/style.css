@@ -1,0 +1,65 @@
+.inputs {
+    height: 28px;
+    width: 100px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    caret-color: red;
+}
+
+.inputs:focus {
+    outline: none;
+}
+
+.inputs::placeholder {
+    color: red;
+}
+
+table {
+    margin-top: 15px;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  .box{
+    margin-left: 48%;
+  }
+  .inputgame{
+    padding: 10px;
+    caret-color: red;
+    height: 35px;
+    margin-top: 10%;
+    margin-left: 44%;
+  }
+.inputgame:focus{
+  outline: 1px solid red;
+}
+  .guessit{
+    height: 30px;
+    width: 79px;
+    border: 1px solid red;
+    background-color: red;
+    color: white;
+    /* margin-top: 10%; */
+    margin-left: 2%;
+  }
+  .guessit:hover{
+    cursor: pointer;
+    background-color: white;
+    color: Black;
+  }
+  .testtext{
+    color: red;
+    margin-left: 48%;
+  }

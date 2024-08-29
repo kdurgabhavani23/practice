@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+    <style>
+
+        .card{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 15rem;
+            width: 35rem;
+            margin:1rem;
+        }
+        .buttonsnames{
+            width: 150px;
+            height: 30px;
+            margin: 1rem;
+        }
+        .number{
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="counterApp">Counter App</div>
+    <div class="card">
+        <div class="number" id ='numbers'>0</div>
+        <div class="d-flex">
+            <button type="button" class="btn btn-primary buttonsnames" id ="increase"onclick="increment()">Increment</button>
+            <button type="button" class="btn btn-info buttonsnames" id ="reset" onclick="resetButton()">Reset</button>
+            <button type="button" class="btn btn-secondary buttonsnames" id ="decrease" onclick="decrement()">Decrement</button>
+    
+        </div>
+    </div>
+    <div class="counterApp">Stop watch</div>
+   <div class="card">
+    <div class="number" id ='time'>00:00:00</div>
+    <div class="d-flex">
+        <button type="button" class="btn btn-primary buttonsnames" id ="start"onclick="startTimer()">Start</button>
+        <button type="button" class="btn btn-info buttonsnames" id ="reset" onclick="resetTime()">Reset</button>
+        <button type="button" class="btn btn-secondary buttonsnames" id ="decrease" onclick="stopTimer()">Stop</button>
+
+    </div>
+   </div>
+</body>
+<script>
+    var count = 0
+    let displaynumber = document.getElementById('time')
+function updateNumber(){
+    displaynumber.innerText = count
+}
+ 
+function increment(){
+   
+ count++
+ updateNumber()
+  }
+
+  function decrement (){
+    
+    count--
+    updateNumber()
+  }
+function resetButton(){
+   count =0
+   updateNumber()
+}
+
+var showTime = document.getElementById('time')
+var startTime
+var stopTime
+var updateTime
+var difference = 0
+var interval
+var runningtime = false
+function startTimer(){
+if(!runningtime){
+   startTime= new Date(). getTime() - difference
+    interval = setInterval(updateTime,1000)
+   runningtime= true
+}
+}
+function updateTime(){
+    var currentTime = new Date(). getTime()
+    difference = currentTime - startTime
+    var hours = Math.floor((difference % (1000 * 60* 60*24)) / (1000* 60*60));
+    var minutes = Math.floor((difference % (1000 * 60 *60)) / (1000 *60));
+    var seconds = Math.floor((difference % (1000 * 60))/ (1000))
+    hours = (hours < 10) ? "0" + hours : hours
+    minutes = (minutes < 10) ? "0"+ minutes:minutes
+    seconds = (seconds  < 10) ? "0" + seconds : seconds
+    showTime.innerHTML = hours + ":" + minutes +":" + seconds
+}
+function stopTime(){
+    clearInterval(interval)
+    runningtime = false
+}
+function resetTime(){
+    clearInterval(interval)
+    runningtime = false
+    difference = 0;
+    showTime.innerHTML = "00:00:00"
+}
+
+</script>
+</html>

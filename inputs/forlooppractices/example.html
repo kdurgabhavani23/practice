@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h4>Array methods</h4>
+<p id="arrlist"></p>
+<h4>
+    Array new methods
+</h4>
+
+<p id="arrnew"></p>
+<h4>Accessing Array Elements(Accessing only one array )</h4>
+<p id="access"></p>
+<h4>Changing an Array element and toString() method</h4>
+<p id="change"></p>
+<h4>Array methods and properties</h4>
+<p>Length of a array</p>
+<p id="props"></p>
+<h4>Accessig array last element</h4>
+<p id="last"></p>
+
+<h4>Array looping</h4>
+<p id="loop"></p>
+<h4>Array foreach()</h4>
+<p id="each"></p>
+<h4>Array at()</h4>
+<p id="atmethod"></p>
+<p>The at method basically we can access the negative values by using at method</p>
+
+<h4>join method()</h4>
+<p id="joins"></p>
+<p>The joins method joins all array methods to string</p>
+
+<h4>Popping and pushing</h4>
+<h4>the popping method pop array items <b>Out</b> of an array</h4>
+<p id="pop"></p>
+<p>the pop method removes the last index of an array</p>
+
+<h4>the push method adds item into the array</h4>
+<p id="push"></p>
+<p> the push method adds new item  at the end of the array </p>
+<h4>shifting and unshifting methods</h4>
+<h4> the shift method removes the first index of an array item and rest of all other to a lower index</h4>
+<p id="shift"></p>
+<h4> the unshift method add the new item at the beginning of the index</h4>
+<p id="unshift"></p>
+
+<h4>concatenating</h4>
+<p>merging of two arrays and forms into a single array</p>
+<script>
+    const fooditems =["Snacks","fruits","vehtables", "vegies"]
+    const studentnames =['Bhavani',"Durga","Bindhu","kaveri"]
+    const employeenames =['Kiran','mahesh','bhuvan','sandesh']
+    const companies =["Tcs","Deloittee","Infoysis","Cognizant"]
+    const countries =['Usa','Japan','india','uk','austraila']
+    const states =['ap','telangana','tn','kerala','karnataka']
+    const items= ["Book","pen"," pencil","Bottle"]
+    let listitems =items
+    document.getElementById('arrlist').innerHTML= listitems
+    console.log(listitems);
+  
+// new array method
+    const cars =new Array("BMW","RR","Ferrai","Honda")
+    let carlist = cars
+    document.getElementById('arrnew').innerHTML = carlist
+    // accesing only one element and toString
+    const wooditems =["Table","Desk","Chair","Cubboard"]
+    const wooditemslist =wooditems[0]
+    document.getElementById('access').innerHTML =wooditemslist
+    console.log(wooditemslist);
+
+// changing the array element
+const vehicles =["bicycle","Tricycle","Auto","Bike"];
+ vehicles[2] = "MotorBicycle"
+ document.getElementById('change').innerHTML = vehicles.toString()
+
+//  array length property
+const brands =["Milton","Golden","Himalaya","Vivo"]
+let objects = brands.length
+document.getElementById('props').innerHTML = objects
+
+// array last element
+const  grettings =["Hi","Hello","Namasthe","Hey people"]
+document.getElementById('last').innerHTML = grettings [grettings.length -2]
+
+// Array looping
+const brandsnames =["Milton","Golden","Himalaya","Vivo","Golden","Lenovo"] 
+let brandlist = brandsnames
+for (let i=0; i< brandsnames; i++){
+    brandlist +=brandsnames[i] + '<br>'
+}
+document.getElementById('loop').innerHTML = brandlist
+
+// for each function
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+let text = "<ul>";
+fruits.forEach(myFunction);
+text += "</ul>";
+
+document.getElementById("each").innerHTML = text;
+
+function myFunction(value) {
+  text += "<li>" + value + "</li>";
+} 
+let eating = fooditems.at(-1)
+document.getElementById('atmethod').innerHTML = eating
+
+let personnames = studentnames.join('Narmada')
+document.getElementById('joins').innerHTML = personnames
+employeenames.pop()
+document.getElementById('pop').innerHTML= employeenames
+companies.push('Accenture')
+document.getElementById('push').innerHTML= companies
+countries.shift()
+document.getElementById('shift').innerHTML= countries
+states.unshift('madhya pradesh')
+ document.getElementById('unshift').innerHTML =states
+</script>
+</body>
+</html>

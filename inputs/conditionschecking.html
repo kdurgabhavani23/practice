@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <div class="card mt-4">
+        <div class="card-header">
+            <h3 style="text-align: center;">Voters List</h3>
+        </div>
+        <div class="card-body">
+            <label for="">Name</label>
+            <input type="text" id="inputname" ><br>
+            <label for="" class="mt-4">Age:</label>
+            <input type="text" id="agenumber" >
+        </div> 
+        <div class="card-footer">
+            <button id="btn-click" onclick="submit()">Submit</button>
+        </div>
+      </div>
+    </div>
+    <input type="text" id="itemslists" value="true">
+    <button id="tryon" onclick="tryit()"> Try it</button>
+    <p id="name"></p>
+    <p id="agevalue"></p>
+    <p id="demo"></p>
+    <p id="test"></p>
+    <p id="tester"></p>
+    <input type="text" id="temp"value="98.6" >
+    <button id="tryon" onclick="checknow()"> Check now</button>
+    <script>
+
+        function checknow(){
+            tempparature = parseFloat("98.6")
+            if(tempparature >=98.6){
+                document.getElementById("temp").innerHTML="u had fever"
+            }
+            else{
+                document.getElementById("temp").innerHTML="U had no fever"
+            }
+        }
+        old = 20
+        if(old <=18){
+            document.getElementById("tester").innerHTML="eligible to vote"
+
+        }
+        else{
+            document.getElementById("tester").innerHTML="Ineligible to vote"
+        }
+        function tryit(){
+            var items =new Boolean(true)
+        if(items == true){
+            console.log("Printing the veg items");
+            document.getElementById("test").innerHTML="Panner, Zeera rice, veg momos"           
+        }
+        else{
+            console.log("Printing the nonveg items");
+            document.getElementById("test").innerHTML="Chicken, Biryani, Mutton"
+        }
+
+        }
+     
+        var number = 100
+        if(number)
+        var year=1964
+        if(((year% 4==0)&& (year % 100 != 0))||(year % 400==0)){
+            console.log("printing leap year");
+            document.getElementById("demo").innerHTML= year+ "Leap year"
+        }
+        else{
+            console.log("printing common year");
+            document.getElementById("demo").innerHTML=year+"Common year" 
+        }
+
+
+        function submit(){
+            // alert("hello")
+            var nameinput =document.getElementById("inputname").value;
+            // var ageinput =document.getElementById("agenumber").value;
+            document.getElementById("name").innerHTML=nameinput
+            let votable 
+            let age = Number(document.getElementById("agenumber").value)
+            if(isNaN(age)){
+                votable="Input is not a  number"
+            }
+            else{
+                votable =(age<18) ? "INEligible " :" Eligible "
+            }
+            document.getElementById("agevalue").innerHTML=votable + "to vote;"
+        }
+
+    </script>
+</body>
+
+</html>

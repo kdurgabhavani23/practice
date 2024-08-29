@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <p id="name"></p>
+  <p id="num"></p>
+  <p id="cars"></p>
+  <p id="id"></p>
+  <p id="namegro"></p>
+  <!-- <p id="id"></p> -->
+</body>
+<script>
+const text = "helloDurga"
+for(i=0; i<=11; i++){
+  console.log( text);  
+}
+// document.getElementById('name').innerHTML+=text+'<br>'
+let j = 0;
+for(j=1; j<=100; j++){
+    console.log(j);
+}
+document.getElementById('num').innerHTML =j
+let x= 2;
+for(; x<=5; x++){
+  console.log("value of x", x);
+}
+document.getElementById('name').innerHTML = x
+const arr =["hello","Hi", "mobile", "car","Bike"]
+let arrtext =""
+for( let s=0; s<  arr.length; s++){
+  // console.log("this is empty strings text",arrtext);
+  console.log("this is arr text",arr);
+  arrtext+=arr[s]+'<br>'
+}
+document.getElementById("cars").innerHTML = arrtext
+const groceryList=[{
+  id:1,
+  name:'Applicants',
+
+},
+{
+  id:2,
+name:'Grocerices'
+},
+{
+  id:3,
+  name:"Gadgets"
+},
+{
+  id:4,
+name:'Vehicles'
+}
+]
+let list = ""
+for (let lists of groceryList) {
+  list += lists.id + ''+lists.name + "<br>";
+}
+document.getElementById("id").innerHTML = list
+// document.getElementById("namegro").innerHTML = list.name
+var marks = 90
+if(marks > 100){
+console.log("“printingmarks”",marks)
+}
+const time = new Date().getHours();
+let greeting;
+if (time < 10) {
+  greeting = "Good morning";
+} else if (time < 20) {
+  greeting = "Good day";
+} else {
+  greeting = "Good evening";
+  console.log(greeting);
+}
+
+
+</script>
+</html>

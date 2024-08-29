@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<body>
+    <p>if condition</p>
+    <p id="checking"></p>
+    <p id="data"></p>
+    <h6 id ="persons"></h6>
+    <h2><u>Getting Date methods</u></h2>
+    <h3 id = "date"></h3>
+    <h3 id = "timeed"></h3>
+    <h3 id = "utime"></h3>
+    <h3 id = "time"></h3>
+    <h3 id = "hours"></h3>
+    <h3 id = "year"></h3>
+    <h3 id = "minutes"></h3>
+    <h3 id = "seconds"></h3>
+    <h3 id = "milliseconds"></h3>
+    <script>
+        const newer = new Date().getDate()
+        const timer = new Date().getHours()
+        const utctimer = new Date().getUTCDate()
+        const well = new Date().getTime()
+        const push = new Date().getFullYear()
+        const said = new Date ().getMinutes()
+        const done = new Date (). getSeconds()
+        const until = new Date (). getMilliseconds()
+        document.getElementById("date").innerHTML=newer
+        document.getElementById("timeed").innerHTML=timer
+        document.getElementById("utime").innerHTML=utctimer
+        document.getElementById("time").innerHTML=well
+        document.getElementById("year").innerHTML=push
+        document.getElementById("minutes").innerHTML=said
+        document.getElementById("seconds").innerHTML=done
+        document.getElementById("milliseconds").innerHTML=until
+
+       const day = new Date().getSeconds()
+       let seconds;
+       if( day > 60 ){
+        seconds = "hii"
+       }
+       else{
+        seconds =" hello"
+       }
+       document.getElementById("data").innerHTML=seconds
+
+        const condition = 18;
+        let voting;
+        
+        if(condition >=  18){
+           voting ="ready to voting"   
+        }
+        else{
+           voting = " not eligible"
+        }
+        document.getElementById("checking").innerHTML=voting
+        const enquire = 60
+        let pension
+        if( enquire >= 60 ){
+            pension= "They are taking"
+        }
+        else{
+            pension ="need to apply"
+        }
+        document.getElementById("persons").innerHTML=pension
+
+    </script>
+</body>
+</html>
